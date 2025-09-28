@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta name="generator" content="Hugo 0.150.0">
+    <meta charset="utf-8">
+<title>Cognitive Agents in the Field</title>
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/acsos-2025-vessels-network-slides/reveal-js/dist/reset.css">
+<link rel="stylesheet" href="/acsos-2025-vessels-network-slides/reveal-js/dist/reveal.css">
+  <link rel="stylesheet" href="/acsos-2025-vessels-network-slides/css/custom-theme.min.1a772004e8684d0b84700f1c991a52228e6814e48a073bfa35b19ac83458ff95.css" id="theme"><link rel="stylesheet" href="/acsos-2025-vessels-network-slides/highlight-js/solarized-dark.min.css">
+<link rel="stylesheet" href="https://gitcdn.link/repo/DanySK/css-blur-animation/master/blur.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oxygen Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu Mono" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/81ac037be0.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h2 id="cognitive-agents-in-the-field">Cognitive Agents in the Field:</h2>
+<h3 id="an-hybrid-approach-between-agent-oriented-and-aggregate-computation">an Hybrid Approach Between Agent-Oriented and Aggregate Computation</h3>
+<br>
+<p><em>Martina Baiardi</em>
+<br>
+University of Bologna, Italy</p>
+</section><section>
+<h2 id="context-modelling-complex-systems">Context: Modelling complex systems</h2>
+<ul>
+<li>Modelling play a crucial role in computer science research
+<ul>
+<li>they <em>bridge</em> the <em>abstraction gap</em> between high-level conceptual understanding and <em>low-level</em> implementation <em>details</em>
+<ul>
+<li>enabling researchers to focus only on essential system properties;</li>
+</ul>
+</li>
+<li>they enable <em>reproducibility</em> in research by providing <em>precise specifications</em> that can be validated and compared</li>
+<li>they serve as <em>development guides</em> that inform architectural decisions and implementation strategies,
+<ul>
+<li><em>reducing</em> the likelihood of <em>design errors</em></li>
+</ul>
+</li>
+<li>they provide the <em>flexibility</em> needed to adapt to changing requirements</li>
+</ul>
+</li>
+</ul>
+</section>
+
+<section data-noprocess="" data-shortcode-slide="" data-background-image="https://anitvam.github.io/acsos-2025-vessels-network-slides/images/bird_flock.gif" data-background-opacity="0.3" data-background-position="center" data-background-size="cover" id="aggregate">
+  
+<h2 id="two-approaches-in-the-saso-community">Two approaches in the SASO community</h2>
+
+<div class="multiCol "><div class="col col-50 mx-5"><h3 id="single-agent-perspective"><em>single-agent perspective</em></h3>
+<p>Focuses on modelling individial entities behavior</p>
+<ul>
+<li><em>Mape-K</em>, <em>Procedural Reasoning System</em>, …</li>
+</ul>
+</div>
+<div class="col col-50 mx-5"><h3 id="collective-perspective"><em>collective perspective</em></h3>
+<p>Focuses on the emergent behavior and properties that arises from the interaction of <em>several</em> entities.</p>
+<ul>
+<li><em>Aggregate Programming Paradigm</em></li>
+</ul>
+</div>
+</div>
+</section><section>
+<h2 id="contribution">Contribution</h2>
+<p><em>Why not leverage the strengts of both paradigms within a single system?</em></p>
+<p>We propose the creation of a software framework that allows to perform together:</p>
+<ol>
+<li><em>Local Cognitive Decision-Making</em></li>
+<li><em>Collective-Oriented Task Delegation</em></li>
+<li><em>Bidirectional communication flow</em> between the two layers</li>
+</ol>
+</section><section>
+<h2 id="methodology">Methodology</h2>
+
+<div class="multiCol "><div class="col col-50 mx-5"><p><em>How it is possible to achieve this?</em> Leveraging existing tools</p>
+<ul>
+<li>JaKta¹ as a framework for modeling cognitive agents (following the Beliefs-Desires-Intentions architecture)</li>
+<li>Collektive² as framework for Aggregate Programming</li>
+</ul>
+</div>
+<div class="col col-50 mx-5"><p>Both technologies are:</p>
+<ul>
+<li>Built on top of Kotlin</li>
+<li>Distributed as open-source libraries</li>
+<li>Provide an internal Domain-Specific Language</li>
+</ul>
+</div>
+</div>
+<br>
+<p><em>The expected result is a unified framework for modelling cognitive agents <br> that can invoke collective computation as a natural extension of agents capabilities.</em></p>
+<br>
+<small>
+¹ https://jakta-bdi.github.io/ <br>
+² https://collektive.github.io/
+</small>
+</section>
+
+<section data-noprocess="" data-shortcode-slide="" data-background-image="https://anitvam.github.io/acsos-2025-vessels-network-slides/images/puzzle_pieces.gif" data-background-opacity="0.2" data-background-position="center" data-background-size="cover" id="challenges">
+  
+<h2 id="main-challenge-domain-integration">Main challenge: domain integration</h2>
+<h3 id="logic-based-nature-of-bdi-reasoning-vs-field-based-aggregated-computations"><em>Logic-based nature of BDI reasoning</em> vs <em>Field-based Aggregated computations</em></h3>
+</section><section>
+<h2 id="research-plan">Research Plan</h2>
+<ul>
+<li><em>Phase 1</em>: separation of the BDI reasoning engine and logic constructs.</li>
+<li><em>Phase 2</em>: Domain integration between the existing libraries
+<ul>
+<li>BDI reasoning over field-based data structures</li>
+</ul>
+</li>
+<li><em>Phase 3</em>: Validation of the framework through simulation of real-world deployments, <br>to test scalability, robustness, and efficiency.</li>
+</ul>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src="/acsos-2025-vessels-network-slides/reveal-hugo/object-assign.js"></script>
+
+<a href="/acsos-2025-vessels-network-slides/reveal-js/dist/print/" id="print-location" style="display: none;"></a>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"custom-theme.scss","custom_theme_compile":true,"custom_theme_options":{"enablesourcemap":true,"targetpath":"css/custom-theme.css"},"height":"1080","highlight_theme":"solarized-dark","history":true,"mermaid":[{}],"slide_number":true,"theme":"league","transition":"slide","transition_speed":"fast","width":"1920"}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/acsos-2025-vessels-network-slides/reveal-js/dist/reveal.js"></script>
+
+
+  
+  
+  <script type="text/javascript" src="/acsos-2025-vessels-network-slides/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/acsos-2025-vessels-network-slides/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/acsos-2025-vessels-network-slides/reveal-js/plugin/zoom/zoom.js"></script>
+  
+  <script type="text/javascript" src="/acsos-2025-vessels-network-slides/reveal-js/plugin/notes/notes.js"></script>
+  
+  
+  <script type="text/javascript" src="/acsos-2025-vessels-network-slides/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+
+  var revealHugoPlugins = {
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+   };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams),
+    camelize(revealHugoPlugins));
+  Reveal.initialize(options);
+</script>
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+</script>
+
+<script type="text/javascript" id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+<script>
+  if (/.*?(\?|&)print-pdf/.test(window.location.toString())) {
+      var ytVideos = document.getElementsByTagName("iframe")
+      for (let i = 0; i < ytVideos.length; i++) {
+          var videoFrame = ytVideos[i]
+          var isYouTube = /^https?:\/\/(www.)youtube\.com\/.*/.test(videoFrame.src)
+          if (isYouTube) {
+              console.log(`Removing ${videoFrame.src}`)
+              var parent = videoFrame.parentElement
+              videoFrame.remove()
+              var p = document.createElement('p')
+              p.append(
+                  document.createTextNode(
+                      "There was an embedded video here, but it is disabled in the printed version of the slides."
+                  )
+              )
+              p.append(document.createElement('br'))
+              p.append(
+                  document.createTextNode(
+                      `Visit instead ${
+                          videoFrame.src
+                      } or ${
+                          videoFrame.src.replace(
+                              /(^https?:\/\/(www.)youtube\.com)\/(embed\/)(\w+).*/,
+                              "https://www.youtube.com/watch?v=$4"
+                          )
+                      }`
+                  )
+              )
+              parent.appendChild(p)
+          }
+      }
+  }
+</script>
+
+
+    
+  
+
+</body></html>
