@@ -49,6 +49,9 @@ Focuses on the emergent behavior and properties that arises from the interaction
 
 ---
 
+{{% multicol %}}
+{{% col class="mx-5"%}}
+
 ## Contribution
 
 *Why not leverage the strengts of both paradigms within a single system?*
@@ -57,6 +60,14 @@ We propose the creation of a software framework that allows to perform together:
 1. *Local Cognitive Decision-Making*
 2. *Collective-Oriented Task Delegation*
 3. *Bidirectional communication flow* between the two layers
+
+{{% /col %}}
+{{% col class="mx-5"%}}
+
+<img src="images/background.svg" />
+
+{{% /col %}}
+{{% /multicol %}}
 
 ---
 
